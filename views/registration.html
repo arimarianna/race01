@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+
+<style>
+    .txt {
+        text-align: center;
+        margin-top: 105px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card px-5 py-4" id="form1">
+                    <div class="form-data">
+                        <div class="logo">
+                            <img src="../public/assets/logo.png" alt="Logo">
+                        </div>
+                        <form action="/auth" method="post">
+                            <div name="email" id="forms-inputs" class="forms-inputs mb-4"> <span>Email</span> <input
+                                    type="text" required>
+                            </div>
+                            <div name="login" id="forms-inputs" class="forms-inputs mb-4"> <span>Login</span> <input
+                                    type="text" required>
+                            </div>
+                            <div id="forms-inputs" class="forms-inputs mb-4"> <span>Password</span>
+                                <input name="password" type="password" required>
+                            </div>
+                            <div name="confirm" id="forms-inputs" class="forms-inputs mb-4"> <span>Confirm
+                                    password</span> <input name="confirm" type="password" onChange="onChange()"
+                                    required>
+                            </div>
+                            <input type="submit" value="SUBMIT" id="btn">
+                        </form>
+                        <div class="txt">
+                            <span id="txt_bottom">Already have an account</span>
+                            <input type="submit" value="Sign In" id="btn_signup">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function onChange() {
+        const password = document.querySelector('input[name=password]');
+        const confirm = document.querySelector('input[name=confirm]');
+
+        if (confirm.value === password.value) {
+            confirm.setCustomValidity('');
+        } else {
+            confirm.setCustomValidity('Passwords don`t match');
+        }
+    }
+</script>
+
+</html>
