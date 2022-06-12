@@ -43,7 +43,7 @@ module.exports = class Model {
         this.password = result[0].password;
     }
     async save() {
-        // console.log("vev", this.login, this.email, this.password)
+        console.log("vev", this.login, this.email, this.password)
         await db
             .promise()
             .query(

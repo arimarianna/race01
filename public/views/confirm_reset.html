@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Reset</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+
+<style>
+    .txt {
+        text-align: center;
+        margin-top: 207px;
+    }
+
+    .txt1 {
+        text-align: center;
+        margin-top: -20px;
+    }
+</style>
+
+<body>
+    <input type="hidden" id="errorMsg" thjs:value="${errorMsg}">
+    <input type="hidden" id="logins" thjs:value="${logins}" />
+    <input type="hidden" id="emails" thjs:value="${emails}" />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card px-5 py-4" id="form1">
+                    <div class="form-data">
+                        <div class="logo">
+                            <img src="../public/assets/logo-oops.png" alt="Logo2">
+                        </div>
+                        <p class="text-center h4 fw-bold mb-5 mx-1 mx-md-4 mt-5">Confirmation</p>
+                        <form action="/confirm-reset" method="post">
+                            <div class="d-flex flex-row justify-content-center gap-2 ">
+                                <span>
+                                    <span>Please, press the RESET button and we will send
+                                        you
+                                        a new password to the email:</span>
+                                </span>
+                            </div>
+                            <input type="hidden" name="login" thjs:value="${login}">
+                            <div class="d-flex flex-row justify-content-center align-items-center gap-2 text">
+                                <span class="idd1" thjs:text="${email}"></span>
+                            </div>
+                            <button type="submit" id="btn">RESET</button>
+                        </form>
+                        <div class="txt">
+                            <p class="text">Don`t have an account? <a href='/signup' class="link-success">Sign Up</a>
+                            </p>
+                        </div>
+                        <div class="txt1">
+                            <p class="text">Already have an account? <a href='/login' class="link-primary">Log In</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

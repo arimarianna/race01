@@ -16,43 +16,48 @@ let app = express();
 const templateEngine = new TemplateEngine()
 
 const hostname = '127.0.0.1',
-	port = 8000;
+    port = 8000;
 
 
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 app.engine('html', expressThymeleaf(templateEngine))
 app.set('view engine', 'html')
-app.set('views', __dirname + '/views')
+app.set('views', __dirname + '/public/views')
 app.use(bodyParser.json());
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const oneDay = 1000 * 60 * 60 * 24
 app.use(
-	sessions({
-		secret: 'password secret',
-		saveUninitialized: true,
-		cookie: { maxAge: oneDay },
-		resave: false
-	})
+    sessions({
+        secret: 'password secret',
+        saveUninitialized: true,
+        cookie: { maxAge: oneDay },
+        resave: false
+    })
 )
 let session;
+// app.get('/', function (req, res) {
+//     res.send('Bebra! URL is not recognised', 404);
+// });
+
 app.get('/', function (req, res) {
-    res.send('Bebra! URL is not recognised', 404);
+    res.status(404).send('Bebra! URL is not recognised');
 });
 
+
 app.get('/public/styles.css', function (request, response) {
-	response.sendFile(path.join(__dirname + '/public/styles.css'));
+    response.sendFile(path.join(__dirname + '/public/styles.css'));
 });
 
 app.get('/public/assets/logo-welcome.png', function (request, response) {
-	response.sendFile(path.join(__dirname + '/public/assets/logo-welcome.png'));
+    response.sendFile(path.join(__dirname + '/public/assets/logo-welcome.png'));
 });
 app.get('/public/assets/logo-back.png', function (request, response) {
-	response.sendFile(path.join(__dirname + '/public/assets/logo-back.png'));
+    response.sendFile(path.join(__dirname + '/public/assets/logo-back.png'));
 });
 app.get('/public/assets/logo-oops.png', function (request, response) {
-	response.sendFile(path.join(__dirname + '/public/assets/logo-oops.png'));
+    response.sendFile(path.join(__dirname + '/public/assets/logo-oops.png'));
 });
 
 app.post('/signup', (req, res) => {
@@ -82,7 +87,10 @@ app.post('/login', (req, res) => {
                 })
             })
         } else {
-                res.redirect('/board')
+            session = req.session
+            session.userData = user
+            // console.log('session =>', req.session)
+            res.redirect('/board')
         }
     })
 })
@@ -156,7 +164,7 @@ app.get('/logout', (req, res) => {
 })
 
 app.listen(port, hostname, () => {
-	console.log(`Server is running at http://${hostname}:${port}/`);
+    console.log(`Server is running at http://${hostname}:${port}/`);
 });
 
 async function listOfUsers() {
@@ -215,7 +223,7 @@ async function sendPassword(user, password) {
         */
 
     })
-	
+
     let info = await transporter.sendMail({
         // for demo
         // from: '"Master VM 👻" <vm@example.com>',          

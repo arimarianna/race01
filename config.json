@@ -1,6 +1,6 @@
 {
     "host": "localhost",
     "user": "mshcherban",
-    "database": "myapp",
-    "password": "securepass"
+    "password": "securepass",
+    "multipleStatements": true
 }
