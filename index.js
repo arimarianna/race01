@@ -12,12 +12,36 @@ const bcrypt = require('bcrypt')
 const User = require('./models/user')
 const nodemailer = require("nodemailer")
 
-let app = express();
-const templateEngine = new TemplateEngine()
-
 const hostname = '127.0.0.1',
-    port = 8000;
+    port = 8000,
+    gamePort = 3000
+let app = express();
 
+const server = require('http').createServer();
+// for phaser 
+const io = require("socket.io")(server, {
+    allowRequest: (req, callback) => {
+      const noOriginHeader = req.headers.origin === undefined;
+      callback(null, noOriginHeader);
+    }
+  });
+
+io.on('connection', function (socket) {
+    console.log('A user connected: ' + socket.id);
+
+    socket.on('disconnect', function () {
+        console.log('A user disconnected: ' + socket.id);
+    });
+});
+
+app.listen(gamePort, () => {
+    console.log(`Server is running at http://${hostname}:${gamePort}/`);
+})
+
+// httpServer.listen(gamePort);
+
+
+const templateEngine = new TemplateEngine()
 
 app.use(express.static(__dirname + '/public'));
 app.engine('html', expressThymeleaf(templateEngine))
@@ -42,7 +66,13 @@ let session;
 // });
 
 app.get('/', function (req, res) {
-    res.status(404).send('Bebra! URL is not recognised');
+    session = req.session
+    if (session.userData) {
+        res.redirect('/board')
+    } else {
+        res.redirect('/login')
+    }
+    // res.status(404).send('Bebra! URL is not recognised');
 });
 
 
