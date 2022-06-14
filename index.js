@@ -16,7 +16,28 @@ const hostname = '127.0.0.1',
     port = 8000,
     gamePort = 3000
 let app = express();
+////////
+const http = require('http').createServer(app);
+const shuffle = require('shuffle-array')
+const cors = require('cors');
+const io = require('socket.io')(http, {
+    cors: {
+        origin: 'http://localhost:8080',
+        methods: ['GET', 'POST']
+    }
+});
 
+io.on('connection', (socket) => {
+    console.log('A user connected', socket.id)
+})
+
+http.listen(gamePort, () => {
+    console.log(`Game Server is running at http://${hostname}:${gamePort}/`)
+})
+
+
+//////////
+/*
 const server = require('http').createServer();
 // for phaser 
 const io = require("socket.io")(server, {
@@ -37,6 +58,7 @@ io.on('connection', function (socket) {
 app.listen(gamePort, () => {
     console.log(`Server is running at http://${hostname}:${gamePort}/`);
 })
+*/
 
 // httpServer.listen(gamePort);
 
