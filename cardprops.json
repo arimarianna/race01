@@ -1,158 +1,162 @@
 {
-    "venom": {
-        "attack": 20,
-        "defense": 20,
-        "quickness": 20,
-        "cost": 3
+    "subject": {
+        "venom": {
+            "attack": 20,
+            "defense": 20,
+            "quickness": 20,
+            "cost": 3
+        },
+        "anti-venom": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 0,
+            "cost": 0
+        },
+        "iron-spider-armor": {
+            "attack": 0,
+            "defense": 25,
+            "quickness": 0,
+            "cost": 3
+        },
+        "panther-habit-1": {
+            "attack": 0,
+            "defense": 40,
+            "quickness": 0,
+            "cost": 3
+        },
+        "panther-habit-2": {
+            "attack": 0,
+            "defense": 40,
+            "quickness": 0,
+            "cost": 3
+        },
+        "ultron": {
+            "attack": 30,
+            "defense": 30,
+            "quickness": 0,
+            "cost": 4
+        },
+        "mjolnir": {
+            "attack": 20,
+            "defense": 0,
+            "quickness": 0,
+            "cost": 5
+        },
+        "cloack-of-levitation": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 20,
+            "cost": 3
+        },
+        "transparent-portal-1": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 30,
+            "cost": 3
+        },
+        "transparent-portal-2": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 30,
+            "cost": 3
+        },
+        "transparent-portal-3": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 30,
+            "cost": 3
+        },
+        "transparent-portal-4": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 30,
+            "cost": 3
+        },
+        "space-stone": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 50,
+            "cost": 10
+        },
+        "time-stone": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 50,
+            "cost": 12,
+            "minusHealth": false
+        },
+        "mind-stone": {
+            "attack": 0,
+            "defense": 15,
+            "quickness": 0,
+            "cost": 10
+        },
+        "power-stone": {
+            "attack": 50,
+            "defense": 0,
+            "quickness": 0,
+            "cost": 10
+        },
+        "soul-stone": {
+            "attack": 0,
+            "defense": 0,
+            "quickness": 0,
+            "changeTurn": false,
+            "cost": 12
+        },
+        "wakandan-shields-1": {
+            "attack": 0,
+            "defense": 30,
+            "quickness": 0,
+            "cost": 3
+        },
+        "wakandan-shields-2": {
+            "attack": 0,
+            "defense": 30,
+            "quickness": 0,
+            "cost": 3
+        }
     },
-    "anti-venom": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 0,
-        "cost": 0
-    },
-    "iron-spider-armor": {
-        "attack": 0,
-        "defense": 25,
-        "quickness": 0,
-        "cost": 3
-    },
-    "panther-habit-1": {
-        "attack": 0,
-        "defense": 40,
-        "quickness": 0,
-        "cost": 3
-    },
-    "panther-habit-2": {
-        "attack": 0,
-        "defense": 40,
-        "quickness": 0,
-        "cost": 3
-    },
-    "ultron": {
-        "attack": 30,
-        "defense": 30,
-        "quickness": 0,
-        "cost": 4
-    },
-    "mjolnir": {
-        "attack": 20,
-        "defense": 0,
-        "quickness": 0,
-        "cost": 5
-    },
-    "cloack-of-levitation": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 20,
-        "cost": 3
-    },
-    "transparent-portal-1": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 30,
-        "cost": 3
-    },
-    "transparent-portal-2": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 30,
-        "cost": 3
-    },
-    "transparent-portal-3": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 30,
-        "cost": 3
-    },
-    "transparent-portal-4": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 30,
-        "cost": 3
-    },
-    "space-stone": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 50,
-        "cost": 10
-    },
-    "time-stone": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 50,
-        "cost": 12,
-        "minusHealth": false
-    },
-    "mind-stone": {
-        "attack": 0,
-        "defense": 15,
-        "quickness": 0,
-        "cost": 10
-    },
-    "power-stone": {
-        "attack": 50,
-        "defense": 0,
-        "quickness": 0,
-        "cost": 10
-    },
-    "soul-stone": {
-        "attack": 0,
-        "defense": 0,
-        "quickness": 0,
-        "changeTurn": false,
-        "cost": 12
-    },
-    "wakandan-shields-1": {
-        "attack": 0,
-        "defense": 30,
-        "quickness": 0,
-        "cost": 3
-    },
-    "wakandan-shields-2": {
-        "attack": 0,
-        "defense": 30,
-        "quickness": 0,
-        "cost": 3
-    },
-    "captain-zelensky": {
-        "attack": 30,
-        "defense": 60,
-        "quickness": 25
-    },
-    "ironstovich": {
-        "attack": 40,
-        "defense": 40,
-        "quickness": 30
-    },
-    "david-banner": {
-        "attack": 100,
-        "defense": 90,
-        "quickness": 10
-    },
-    "nick-reznickov": {
-        "attack": 30,
-        "defense": 30,
-        "quickness": 30
-    },
-    "irina-vereshshchuk": {
-        "attack": 20,
-        "defense": 20,
-        "quickness": 40
-    },
-    "doctor-podolyak": {
-        "attack": 40,
-        "defense": 40,
-        "quickness": 30
-    },
-    "spider-mayor": {
-        "attack": 40,
-        "defense": 30,
-        "quickness": 50
-    },
-    "kim": {
-        "attack": 30,
-        "defense": 40,
-        "quickness": 30
+"player": {
+        "captain-zelensky": {
+            "attack": 30,
+            "defense": 60,
+            "quickness": 25
+        },
+        "ironstovich": {
+            "attack": 40,
+            "defense": 40,
+            "quickness": 30
+        },
+        "david-banner": {
+            "attack": 100,
+            "defense": 90,
+            "quickness": 10
+        },
+        "nick-reznickov": {
+            "attack": 30,
+            "defense": 30,
+            "quickness": 30
+        },
+        "irina-vereshshchuk": {
+            "attack": 20,
+            "defense": 20,
+            "quickness": 40
+        },
+        "doctor-podolyak": {
+            "attack": 40,
+            "defense": 40,
+            "quickness": 30
+        },
+        "spider-mayor": {
+            "attack": 40,
+            "defense": 30,
+            "quickness": 50
+        },
+        "kim": {
+            "attack": 30,
+            "defense": 40,
+            "quickness": 30
+        }
     }
 }
