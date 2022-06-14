@@ -73,6 +73,12 @@
 			"pivot": {
 				"x": 0.5,
 				"y": 0.5
+			},
+			"props":{
+				"attack": 20,
+				"defense": 20,
+				"quickness": 20,
+				"cost": 3
 			}
 		},
         {
