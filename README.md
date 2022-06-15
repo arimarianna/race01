@@ -4,6 +4,7 @@ Marvel game about the real Ukrainian SuperHeroes
 
 ![alt text](./Demo.png)
 
+
 ## Description
 
 Election is a simple (enough) card game, goal of which is to overcome your opponent and not lose your own life.
