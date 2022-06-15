@@ -8,7 +8,7 @@ Election is a simple (enough) card game, goal of which is to overcome your oppon
 
 To play the Election you have to get Election Account (does not really force you to vote, but who knows ʘ‿ʘ)
 
-Once you register or login into your profile, you can start fighting with your friend (｡◕‿◕｡) or enemy( ఠൠఠ )ﾉ (no bots! do not forget about a real peoplpe, ok?)
+Once you register or login into your profile, you can start fighting with your friend (｡◕‿◕｡) or enemy( ఠൠఠ )ﾉ (no bots! do not forget about a real people, ok?)
 
 The next issue is a process of game. When your friend enters a game, you both are able to deal your own cards (press active button 'DEAL CARDS')
 'First come, first go'? Exactly. One of you who connected first will attack first. 
