@@ -15,6 +15,9 @@ export default class Card {
             if (type === 'playerCard') {
                 scene.input.setDraggable(card);
             }
+            if (sprite === 'cardStack' || sprite === 'subjectBack' || type === 'person') {
+                card.disableInteractive()
+            }
             return card;
         }
     }
