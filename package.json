@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon index.js",
+    "serve": "nodemon server.js",
     "start": "node index.js"
   },
   "keywords": [],
@@ -19,10 +19,13 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemailer": "^6.7.5",
-    "nodemon": "^2.0.16",
     "path": "^0.12.7",
+    "phaser3-webfont-loader": "^1.0.0",
     "session": "^0.1.0",
     "shuffle-array": "^1.0.1",
     "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }

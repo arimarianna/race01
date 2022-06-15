@@ -1,0 +1,5 @@
+{
+    "player": ["captainZelensky", "ironstovich", "davidBanner", "nickReznickov", "irinaVereshshchuk", "doctorPodolyak", "spiderMayor", "kim"],
+    "subject": ["venom", "antiVenom", "ironSpiderArmor", "pantherHabit1", "pantherHabit2", "ultron", "mjolnir", "cloackOfLevitation", "transparentPortal1", "transparentPortal2", "transparentPortal3", "transparentPortal4", "spaceStone", "timeStone", "mindStone", "realityStone", "powerStone", "soulStone", "wakandanShields1", "wakandanShields2"],
+    "back": ["playerBack","subjectBack"]
+}
