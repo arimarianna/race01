@@ -1,6 +1,6 @@
 # Race01 Election - Welcome Back!
 
-Marvel game about real Ukrainian SuperHeroes
+Marvel game about the real Ukrainian SuperHeroes
 
 ## Description
 
