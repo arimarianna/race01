@@ -17,7 +17,6 @@ try {
     const sqlLine = fs.readFileSync(`${__dirname}/users.sql`, 'utf-8')
     db.query(sqlLine, (err, result) => {
         if (err) console.error(err)
-        // console.log(result)
     })
 } catch (error) {
     console.error(error)

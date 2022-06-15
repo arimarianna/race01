@@ -17,21 +17,6 @@ export default class InteractiveHandler {
             scene.dealCards.setColor('#2651A6')
         })
 
-
-        // scene.input.on('pointerover', (event, gameObjects) => {
-        //     let pointer = scene.input.activePointer;
-        //     console.log(gameObjects)
-        //     if (gameObjects[0].type === "Image" && gameObjects[0].data.list.name !== "subjectBack") {
-        //         scene.cardPreview = scene.add.image(pointer.worldX, pointer.worldY, gameObjects[0].data.values.sprite).setScale(1.25, 1.25);
-        //     };
-        // });
-
-        // scene.input.on('pointerout', (event, gameObjects) => {
-        //     if (gameObjects[0].type === "Image" && gameObjects[0].data.list.name !== "subjectBack") {
-        //         scene.cardPreview.setVisible(false);
-        //     };
-        // });
-
         scene.input.on('drag', (pointer, gameObject, dragX, dragY) => {
             gameObject.x = dragX;
             gameObject.y = dragY;
@@ -41,7 +26,6 @@ export default class InteractiveHandler {
             gameObject.setTint(0xCDCDCD);
             gameObject.setScale(1.25, 1.25)
             scene.children.bringToTop(gameObject);
-            // scene.cardPreview.setVisible(false);
         })
 
         scene.input.on('dragend', (pointer, gameObject, dropped) => {

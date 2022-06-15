@@ -15,9 +15,6 @@ let allPowers = []
 
 let cardProps = JSON.parse(fs.readFileSync('./cardprops.json'))
 let cards = JSON.parse(fs.readFileSync('./cardNamesArrays.json'))
-// console.log(cards.player)
-// console.log(cards.subject)
-
 
 function arrayRemove(arr, value) {
 
@@ -25,7 +22,6 @@ function arrayRemove(arr, value) {
         return ele !== value;
     });
 }
-
 
 const io = require("socket.io")(http, {
     cors: {
@@ -60,7 +56,6 @@ io.on('connection', function (socket) {
         playerCards = shuffle(cards.player)
         cardsInDeck = shuffle(cards.subject);
 
-        // console.log(players);
         if (Object.keys(players).length < 2) return;
         io.emit('changeGameState', "Initializing");
         console.log(playerCards, cardsInDeck)
@@ -79,7 +74,6 @@ io.on('connection', function (socket) {
             players[socketId].inHand.push(cardsInDeck.shift());
         }
 
-        // console.log(players);
         io.emit('dealCards', socketId, players[socketId].inHand, players[socketId].playerCard);
         readyCheck++;
         if (readyCheck >= 2) {
@@ -98,7 +92,7 @@ io.on('connection', function (socket) {
         players[socketId].inHand = arrayRemove(players[socketId].inHand, cardName);
         players[socketId].playedCard = cardName;
         io.emit('cardPlayed', cardName, socketId);
-        // console.log(cardName, socketId)
+
         io.emit('changeTurn');
         if (cardProps.subject[cardName] && cardProps.player[players[socketId].playerCard]) {
             players[socketId].powers = {
@@ -110,8 +104,6 @@ io.on('connection', function (socket) {
             allPowers.push(players[socketId].powers)
         }
 
-        // console.log(cardProps.subject[players[socketId].playedCard], cardProps.player[players[socketId].playerCard])
-        // console.log(socketId, 'powers:', players[socketId].powers)
         console.log(allPlayed)
         console.log(players);
 
@@ -128,8 +120,6 @@ io.on('connection', function (socket) {
                 io.emit('defenderWin', allPowers[1].sid)
             }
         }
-
-        // console.log(key, players[key].powers.attack, players[key].powers.defense, players[key].powers.quikness)
     });
 
     socket.on('disconnect', function () {

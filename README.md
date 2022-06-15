@@ -23,11 +23,7 @@ In each round you can use only one subject card, so think carefuly and do not lo
 
 ### Dependencies
 
-<<<<<<< HEAD
 Well, to start a server and game you have to get installed Node.js
-=======
-Well, to start aa server and a game you have to get installed Node.js
->>>>>>> 9eb679a9d7ab9eec3ce1cc5f2bdea8335246a9f7
 ```
 npm install -g npm
 ```
@@ -44,11 +40,7 @@ and the other staff that could make your terminal type an error
 
 ### Installing
 
-<<<<<<< HEAD
 In order to install just clone this repo and enjoy 
-=======
-In oreder to install just clone this repo and enjoy 
->>>>>>> 9eb679a9d7ab9eec3ce1cc5f2bdea8335246a9f7
 
 ### Executing program
 
@@ -61,17 +53,13 @@ npm run start
 and in your main folder also run
 ```
 npm run start
-<<<<<<< HEAD
 npm run serve
-=======
->>>>>>> 9eb679a9d7ab9eec3ce1cc5f2bdea8335246a9f7
 ```
 
 ### WARNING
 If you get a database problem, while trying to sign up or log in, you should create your user in mysql2 workbench (yes, what you wanted instead??)
 there you should run the folowwing script:
 ```
-<<<<<<< HEAD
 CREATE DATABASE IF NOT EXISTS myapp;
 CREATE USER IF NOT EXISTS 'username'@'localhost' IDENTIFIED BY 'securepass';
 GRANT ALL PRIVILEGES ON * . * TO 'username'@'localhost';
@@ -80,16 +68,6 @@ flush privileges;
 ```
 
 now you can enjoy signing up, logging in and playing an amazing game
-=======
-CREATE DATABASE IF NOT EXISTS ucode_web;
-CREATE USER IF NOT EXISTS 'vmelekhova'@'localhost' IDENTIFIED BY 'securepass';
-GRANT ALL PRIVILEGES ON * . * TO 'vmelekhova'@'localhost';
-ALTER USER 'vmelekhova'@'localhost' IDENTIFIED WITH mysql_native_password BY 'securepass';
-flush privileges;
-```
-
-now you can enjoy signing up, logging in and playing amazing game
->>>>>>> 9eb679a9d7ab9eec3ce1cc5f2bdea8335246a9f7
 
 ## Help
 

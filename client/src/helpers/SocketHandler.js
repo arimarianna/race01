@@ -20,7 +20,6 @@ export default class SocketHandler {
                 scene.DeckHandler.dealCard(24 + 206 / 2, 608 + 340 / 2, "cardStack", "opponentCard");
 
                 scene.DeckHandler.dealCard(15 + 206 / 2, 617 + 340 / 2, "cardStack", "playerCard");
-                // scene.DeckHandler.dealCard(15, 617, "cardStack", "opponentCard");
 
                 scene.dealCards.setInteractive();
                 scene.dealCards.setColor('#2651A6');
@@ -40,7 +39,6 @@ export default class SocketHandler {
             if (health == null) { // i won
                 scene.GameHandler.opponentHealth -= healthLost
                 scene.opponentHealth.setText(`${scene.GameHandler.opponentHealth} ♥`)
-                // scene.dealCards = scene.add.text(1031, 457, `${scene.GameHandler.playerHealth} ♥`).setFontSize(16).setFontFamily('Anton');
             } else { // i lost
                 scene.GameHandler.playerHealth -= healthLost
                 scene.playerHealth.setText(`${scene.GameHandler.playerHealth} ♥`)
@@ -50,7 +48,6 @@ export default class SocketHandler {
         scene.socket.on('defenderWin', (socketId, healthLost = null) => {
             scene.dealCards.setText('Defender Won')
         })
-
 
         scene.socket.on('dealCards', (socketId, cards, playerCard) => {
             if (socketId === scene.socket.id) {

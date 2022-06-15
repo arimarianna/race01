@@ -15,7 +15,6 @@ module.exports = class Model {
             .query(`SELECT * FROM users WHERE login ='${this.login}' AND email='${this.email}'`)
             .then((res) => {
                 let match = bcrypt.compareSync(this.password, res[0][0].password)
-                // console.log(res, this.password, res[0][0].password, match)
                 if (res[0].length !== 0 && match) {
                     this.id = res[0][0].id;
                     let salt = bcrypt.genSaltSync(Number(this.password[0]))

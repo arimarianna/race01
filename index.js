@@ -36,9 +36,6 @@ app.use(
     })
 )
 let session;
-// app.get('/', function (req, res) {
-//     res.send('Bebra! URL is not recognised', 404);
-// });
 
 app.get('/', function (req, res) {
     session = req.session
@@ -47,9 +44,7 @@ app.get('/', function (req, res) {
     } else {
         res.redirect('/login')
     }
-    // res.status(404).send('Bebra! URL is not recognised');
 });
-
 
 app.get('/public/styles.css', function (request, response) {
     response.sendFile(path.join(__dirname + '/public/styles.css'));
@@ -94,7 +89,7 @@ app.post('/login', (req, res) => {
         } else {
             session = req.session
             session.userData = user
-            // console.log('session =>', req.session)
+
             res.redirect('/board')
         }
     })
@@ -212,27 +207,9 @@ async function sendPassword(user, password) {
         tls: {
             rejectUnauthorized: false
         },
-
-        // for demo
-        /*
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false,
-        auth: {
-            user: account.user,
-            pass: account.pass,
-        },
-        tls: {
-            rejectUnauthorized: false
-        },
-        */
-
     })
 
     let info = await transporter.sendMail({
-        // for demo
-        // from: '"Master VM 👻" <vm@example.com>',          
-        // for gmail
         from: 'veronika0melehova@gmail.com',
         to: user.email,
         subject: "Password reset",
@@ -240,65 +217,5 @@ async function sendPassword(user, password) {
         html: `<p>Hey, <h1>${user.login}</h1></p><div><p>, the new password for your *** account is: <code>${password}</code></p><p>If you did not confirm reset of password, do it now. Only you can see this password</p></div>`
     })
     console.log("Message sent: %s", info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-    // Preview only available when sending through an Ethereal account
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 }
-
-/*
-        let match = bcrypt.compareSync(req.body.password, password)
-    if (match) {
-        console.log('OK')
-    }
-    else
-        console.error('NE OK')
-*/
-
-
-
-
-
-// app.use(session({
-// 	secret: 'secret',
-// 	resave: true,
-// 	saveUninitialized: true
-// }));
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname, 'static')));
-
-// app.get('/', function (request, response) {
-// 	response.sendFile(path.join(__dirname + '/views/registration.html'));
-// });
-
-// app.get('/public/styles.css', function (request, response) {
-// 	response.sendFile(path.join(__dirname + '/public/styles.css'));
-// });
-
-// app.get('/public/assets/logo.png', function (request, response) {
-// 	response.sendFile(path.join(__dirname + '/public/assets/logo.png'));
-// });
-
-// ////////////////
-
-// app.post('/auth', function (request, response) {
-// 	const { email, login, password } = request.body;
-
-// 	if (!request.body)
-// 		return response.sendStatus(400);
-
-// 	if (email && login && password) {
-// 		db.query('SELECT * FROM users WHERE email = ? AND login = ? AND password = ?', [email, login, password], function (error, results, fields) {
-// 			if (error) throw error;
-
-// 			if(results.lenght > 0) {
-// 				request.flash('error', 'The email is already in use');
-// 				response.redirect('/')
-// 			}
-// 		});
-// 		response.end();
-// 	}
-// });
-
-////////////////
