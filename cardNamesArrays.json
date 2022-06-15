@@ -1,5 +1,5 @@
 {
-    "player": ["captain-zelensky","ironstovich","david-banner","nick-reznickov","irina-vereshshchuk","doctor-podolyak","spider-mayor","kim"],
-    "subject": ["venom","anti-venom","iron-spider-armor","panther-habit-1","panther-habit-2","ultron","mjolnir","cloack-of-levitation","transparent-portal-1","transparent-portal-2","transparent-portal-3","transparent-portal-4","space-stone","time-stone","mind-stone","reality-stone","power-stone","soul-stone","wakandan-shields-1","wakandan-shields-2"],
+    "player": ["captainZelensky", "ironstovich", "davidBanner", "nickReznickov", "irinaVereshshchuk", "doctorPodolyak", "spiderMayor", "kim"],
+    "subject": ["venom", "antiVenom", "ironSpiderArmor", "pantherHabit1", "pantherHabit2", "ultron", "mjolnir", "cloackOfLevitation", "transparentPortal1", "transparentPortal2", "transparentPortal3", "transparentPortal4", "spaceStone", "timeStone", "mindStone", "realityStone", "powerStone", "soulStone", "wakandanShields1", "wakandanShields2"],
     "back": ["playerBack","subjectBack"]
 }

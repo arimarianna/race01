@@ -12,56 +12,9 @@ const bcrypt = require('bcrypt')
 const User = require('./models/user')
 const nodemailer = require("nodemailer")
 
-const hostname = '127.0.0.1',
-    port = 8000,
-    gamePort = 3000
+const hostname = 'localhost',
+    port = 8000;
 let app = express();
-////////
-const http = require('http').createServer(app);
-const shuffle = require('shuffle-array')
-const cors = require('cors');
-const io = require('socket.io')(http, {
-    cors: {
-        origin: 'http://localhost:8080',
-        methods: ['GET', 'POST']
-    }
-});
-
-io.on('connection', (socket) => {
-    console.log('A user connected', socket.id)
-})
-
-http.listen(gamePort, () => {
-    console.log(`Game Server is running at http://${hostname}:${gamePort}/`)
-})
-
-
-//////////
-/*
-const server = require('http').createServer();
-// for phaser 
-const io = require("socket.io")(server, {
-    allowRequest: (req, callback) => {
-      const noOriginHeader = req.headers.origin === undefined;
-      callback(null, noOriginHeader);
-    }
-  });
-
-io.on('connection', function (socket) {
-    console.log('A user connected: ' + socket.id);
-
-    socket.on('disconnect', function () {
-        console.log('A user disconnected: ' + socket.id);
-    });
-});
-
-app.listen(gamePort, () => {
-    console.log(`Server is running at http://${hostname}:${gamePort}/`);
-})
-*/
-
-// httpServer.listen(gamePort);
-
 
 const templateEngine = new TemplateEngine()
 

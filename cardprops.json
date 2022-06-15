@@ -6,25 +6,25 @@
             "quickness": 20,
             "cost": 3
         },
-        "anti-venom": {
-            "attack": 0,
-            "defense": 0,
-            "quickness": 0,
-            "cost": 0
+        "antiVenom": {
+            "attack": 20,
+            "defense": 20,
+            "quickness": 20,
+            "cost": 3
         },
-        "iron-spider-armor": {
+        "ironSpiderArmor": {
             "attack": 0,
             "defense": 25,
             "quickness": 0,
             "cost": 3
         },
-        "panther-habit-1": {
+        "pantherHabit1": {
             "attack": 0,
             "defense": 40,
             "quickness": 0,
             "cost": 3
         },
-        "panther-habit-2": {
+        "pantherHabit2": {
             "attack": 0,
             "defense": 40,
             "quickness": 0,
@@ -42,83 +42,89 @@
             "quickness": 0,
             "cost": 5
         },
-        "cloack-of-levitation": {
+        "cloackOfLevitation": {
             "attack": 0,
             "defense": 0,
             "quickness": 20,
             "cost": 3
         },
-        "transparent-portal-1": {
+        "transparentPortal1": {
             "attack": 0,
             "defense": 0,
             "quickness": 30,
             "cost": 3
         },
-        "transparent-portal-2": {
+        "transparentPortal2": {
             "attack": 0,
             "defense": 0,
             "quickness": 30,
             "cost": 3
         },
-        "transparent-portal-3": {
+        "transparentPortal3": {
             "attack": 0,
             "defense": 0,
             "quickness": 30,
             "cost": 3
         },
-        "transparent-portal-4": {
+        "transparentPortal4": {
             "attack": 0,
             "defense": 0,
             "quickness": 30,
             "cost": 3
         },
-        "space-stone": {
+        "spaceStone": {
             "attack": 0,
             "defense": 0,
             "quickness": 50,
             "cost": 10
         },
-        "time-stone": {
+        "timeStone": {
             "attack": 0,
             "defense": 0,
             "quickness": 50,
             "cost": 12,
             "minusHealth": false
         },
-        "mind-stone": {
+        "mindStone": {
             "attack": 0,
             "defense": 15,
             "quickness": 0,
             "cost": 10
         },
-        "power-stone": {
+        "powerStone": {
             "attack": 50,
             "defense": 0,
             "quickness": 0,
             "cost": 10
         },
-        "soul-stone": {
+        "soulStone": {
             "attack": 0,
             "defense": 0,
             "quickness": 0,
             "changeTurn": false,
             "cost": 12
         },
-        "wakandan-shields-1": {
+        "realityStone": {
+            "attack": 10,
+            "defense": 10,
+            "quickness": 10,
+            "cost": 10
+        },
+        "wakandanShields1": {
             "attack": 0,
             "defense": 30,
             "quickness": 0,
             "cost": 3
         },
-        "wakandan-shields-2": {
+        "wakandanShields2": {
             "attack": 0,
             "defense": 30,
             "quickness": 0,
             "cost": 3
         }
     },
-"player": {
-        "captain-zelensky": {
+    "player": {
+        "captainZelensky": {
             "attack": 30,
             "defense": 60,
             "quickness": 25
@@ -128,27 +134,27 @@
             "defense": 40,
             "quickness": 30
         },
-        "david-banner": {
+        "davidBanner": {
             "attack": 100,
             "defense": 90,
             "quickness": 10
         },
-        "nick-reznickov": {
+        "nickReznickov": {
             "attack": 30,
             "defense": 30,
             "quickness": 30
         },
-        "irina-vereshshchuk": {
+        "irinaVereshshchuk": {
             "attack": 20,
             "defense": 20,
             "quickness": 40
         },
-        "doctor-podolyak": {
+        "doctorPodolyak": {
             "attack": 40,
             "defense": 40,
             "quickness": 30
         },
-        "spider-mayor": {
+        "spiderMayor": {
             "attack": 40,
             "defense": 30,
             "quickness": 50

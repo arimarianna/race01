@@ -9,7 +9,7 @@ function getCardNames() {
     fs.writeFileSync('cardnames.json', JSON.stringify(cards), 'utf-8', (err) => {
         console.error(err)
     })
-    console.log(cards)
+    // console.log(cards)
 
 }
 //////
@@ -54,11 +54,11 @@ const decapitalize = (s) => {
 
 function cards() {
     let data = BigNames();
-    console.log(data)
+    // console.log(data)
     let res = ''
     for (key in data) {
         // console.log(key)
-        res += `${decapitalize(data[key])}: new ${data[key]}(scene),\n`
+        res += `"${decapitalize(data[key])}", `
     }
     return res
 }
@@ -72,7 +72,7 @@ import CardStack from './cards/CardStack';
 */
 function imports() {
     let data = BigNames();
-    console.log(data)
+    // console.log(data)
     let res = ''
     for (key in data) {
         // console.log(key)
@@ -104,9 +104,9 @@ function classes() {
         res += `export default class ${BigNames()[key]} extends Card {
     constructor(scene) {
         super(scene);
-        this.name = "${key}";
-        this.playerCardSprite = "${key}";
-        this.opponentCardSprite = "${key}";
+        this.name = "${decapitalize(data[key])}";
+        this.playerCardSprite = "${decapitalize(data[key])}";
+        this.opponentCardSprite = "${decapitalize(data[key])}";
     }
 }`
         fs.writeFileSync(`./client/src/helpers/cards/${BigNames()[key]}.js`, res, 'utf-8', (err) => {
@@ -117,4 +117,30 @@ function classes() {
     // console.log(res)
 }
 
-classes()
+// classes()
+
+
+/**
+ * 
+ * this.load.image('cardStack', 'src/assets/cardStack.png');
+        this.load.image('cardBack', 'src/assets/cardBack.png');
+ */
+        loadImages()
+
+function loadImages() {
+    let data = BigNames()
+    let res = ''
+    for (key in data) {
+        res += `this.load.image('${decapitalize(data[key])}', 'src/assets/${key}.png');\n`
+    }
+    // console.log(res)
+}
+
+///////////////
+let data = JSON.parse(fs.readFileSync('./cardprops.json', 'utf-8'));
+let obj = {}
+for (key in data.player) {
+    console.log(key)
+    obj[decapitalize(upper(key))] = data.player[key]
+}
+console.log(JSON.stringify(obj))

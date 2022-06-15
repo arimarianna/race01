@@ -1,6 +1,6 @@
 {
     "host": "localhost",
-    "user": "mshcherban",
-    "password": "securepass",
+    "user": "ms",
+    "password": "12345678",
     "multipleStatements": true
 }

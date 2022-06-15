@@ -2,8 +2,8 @@ import Card from "./Card.js"
 export default class PantherHabit2 extends Card {
     constructor(scene) {
         super(scene);
-        this.name = "panther-habit-2";
-        this.playerCardSprite = "panther-habit-2";
-        this.opponentCardSprite = "panther-habit-2";
+        this.name = "pantherHabit2";
+        this.playerCardSprite = "pantherHabit2";
+        this.opponentCardSprite = "pantherHabit2";
     }
 }
